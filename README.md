@@ -1,4 +1,5 @@
 # SQLProject
+The expansion of supermarkets in densely populated cities is accelerating, leading to heightened market competition. This dataset represents historical sales records from a supermarket chain, capturing transactions from three different branches over a three-month period. Its structured nature makes it well-suited for applying predictive data analytics techniques.
 
 # Overview
 In the highly competitive retail landscape, supermarkets must leverage data-driven insights to optimize sales strategies, manage inventory efficiently, and enhance customer experience. This project explores supermarket sales data from multiple branches over a defined period, aiming to uncover key purchasing trends, peak sales periods, and high-performing product categories.
