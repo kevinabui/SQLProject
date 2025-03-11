@@ -39,9 +39,3 @@ SELECT
 FROM sales
 GROUP BY Payment
 ORDER BY `Transaction Count`;
-    
-
-    
-
-
-    

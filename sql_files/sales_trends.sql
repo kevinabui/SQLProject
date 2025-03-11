@@ -33,5 +33,3 @@ SELECT Payment, COUNT(*) AS transaction_count, ROUND(SUM(Total), 2) AS total_sal
 FROM Sales
 GROUP BY Payment
 ORDER BY total_sales DESC;
-
-
