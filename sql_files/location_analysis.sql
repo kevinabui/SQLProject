@@ -55,4 +55,4 @@ SELECT
     SUM(Quantity) AS `Total Items Sold`
 FROM sales
 GROUP BY Branch, City, `Product line`
-ORDER BY Branch, `Total Revenue` DESC;
+ORDER BY Branch, `Total Revenue` DESC; 
