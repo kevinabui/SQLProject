@@ -17,7 +17,7 @@
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
-  <repository-location id='Book2_17519280695850' path='/workbooks' revision='1.3' />
+  <repository-location id='Book2_17519280695850' path='/workbooks' revision='1.4' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -299,6 +299,7 @@
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
       <column datatype='string' name='[Invoice ID]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Product line]' role='dimension' type='nominal' />
       <column aggregation='Hour' datatype='datetime' name='[Time]' role='dimension' type='ordinal' />
       <column caption='supermarket_sales.csv' datatype='table' name='[__tableau_internal_object_id__].[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]' role='measure' type='quantitative' />
       <column caption='Cogs' datatype='real' name='[cogs]' role='measure' type='quantitative' />
@@ -307,6 +308,7 @@
       <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
       <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
       <column-instance column='[Invoice ID]' derivation='None' name='[none:Invoice ID:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Product line]' derivation='None' name='[none:Product line:nk]' pivot='key' type='nominal' />
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
         <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/b0/9c5n0dnn5yq50yy8l4_zmw4w0000gn/T/tableau-temp/#TableauTemp_1ydc2bh18h3c2y14naeya0pujle0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
@@ -324,7 +326,6 @@
               <approx-count>1000</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Branch</remote-name>
@@ -339,7 +340,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>City</remote-name>
@@ -354,7 +354,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Customer type</remote-name>
@@ -369,7 +368,6 @@
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Gender</remote-name>
@@ -384,7 +382,6 @@
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Product line</remote-name>
@@ -399,7 +396,6 @@
               <approx-count>6</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Unit price</remote-name>
@@ -413,7 +409,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>943</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Quantity</remote-name>
@@ -427,7 +422,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Tax 5%</remote-name>
@@ -441,7 +435,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>990</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Total</remote-name>
@@ -455,7 +448,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>990</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Date</remote-name>
@@ -469,7 +461,6 @@
               <aggregation>Year</aggregation>
               <approx-count>89</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Time</remote-name>
@@ -483,7 +474,6 @@
               <aggregation>Hour</aggregation>
               <approx-count>506</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Payment</remote-name>
@@ -498,7 +488,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>cogs</remote-name>
@@ -512,7 +501,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>990</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>gross margin percentage</remote-name>
@@ -526,7 +514,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>1</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>gross income</remote-name>
@@ -540,7 +527,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>990</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Rating</remote-name>
@@ -554,7 +540,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>61</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[supermarket_sales.csv_7C1DD803D75446799E6631AD0D279EC2]</object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -3583,6 +3568,26 @@
               <bucket>&quot;Female&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[none:Product line:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Home and lifestyle&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Health and beauty&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Electronic accessories&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Food and beverages&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Sports and travel&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fashion accessories&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
@@ -3902,10 +3907,47 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='18' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+                <zone fixed-size='280' h='51512' id='9' is-fixed='true' name='Sheet 2' w='73692' x='1231' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='49070' id='13' name='Sheet 2' pane-specification-id='0' param='[federated.07t21f30d2j93z16km53g1n88maj].[none:Gender:nk]' type-v2='color' w='23846' x='74923' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46628' id='14' is-fixed='true' name='Sheet 3' w='73692' x='1231' y='52442'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='49070' id='17' name='Sheet 3' pane-specification-id='0' param='[federated.07t21f30d2j93z16km53g1n88maj].[none:Product line:nk]' type-v2='color' w='23846' x='74923' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -3942,7 +3984,7 @@
       </cards>
       <simple-id uuid='{57F88BE3-9AF0-42BC-9A87-D31019B9019D}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Sheet 2'>
           <zoom type='entire-view' />
@@ -3954,7 +3996,7 @@
       <active id='-1' />
       <simple-id uuid='{E5B87837-9BE4-4E12-9997-A7578068CA25}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
